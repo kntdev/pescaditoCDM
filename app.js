@@ -133,6 +133,3 @@ class producto {
         `
     }
 }
-
-let quilmes = new producto("Quilmes","Es una cerveza de lata",200);
-document.write(quilmes.info);
