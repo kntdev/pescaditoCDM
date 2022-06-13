@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Manrope&display=swap');
+
+/*///Medidas generales///*/
+hr{
+    margin: 30px;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1.30em;
+    padding: 10px;
+}
+h4{
+    font-size: 1.60em;
+}
+main{
+    text-align: center;
+}
+/*///////Header//////*/
+.logito{
+    height: 250px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.items{
+    text-align: center;
+    margin-top: 5px;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+}
+.items-inicio{
+    font-family: 'Manrope', sans-serif;
+}
+.menu-items{
+    display: none;
+}
+.menu-items.active{
+    display: block;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #878787;
+    font-family: 'Fredericka the Great', cursive;
+}
+/*///////Menu/////////*/
+
+.container_menu{
+    display: none;
+}
+.container_pescado{
+    display: none;
+}
+.container_hamburguesa{
+    display: none;
+}
+.container_salsa{
+    display: none;
+}
+
+.container_menu.active{
+    display: block;
+}
+.container_pescado.active{
+    display: block;
+}
+.container_hamburguesa.active{
+    display: block;
+}
+.container_salsa.active{
+    display: block;
+}
+/*//////Barra///////*/
+
+.barra-items{
+    display: none;
+}
+.barra-items.active{
+    display: block;
+    color:#878787;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+/*/Barra active/*/
+.container_desayuno{
+    display: none;    
+}
+.container_cerveza{
+    display: none;
+}
+.container_gaseosa{
+    display: none;
+}
+.container_cocteles{
+    display: none;
+}
+.container_desayuno.active{
+    display: block;
+}
+.container_cerveza.active{
+    display: block;
+}
+.container_gaseosa.active{
+    display: block;
+}
+.container_cocteles.active{
+    display: block;
+}
+/*//////History//////*/
+.history{
+    font-size: 4em;
+}
