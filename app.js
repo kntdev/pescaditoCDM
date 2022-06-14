@@ -140,11 +140,14 @@ class producto {
 const ctnMenu = document.getElementById("ctn-menu");
 
 // agregar producto a menu dia
+let platoAdverso = new producto("Plato adverso","Este plato es sumamente adverso no se entiende",300);
 let platoFalopa = new producto("Plato sumamente drogradicto","A este plato le fascina la merca no la puede parar de tomar",1400);
 let platoPersonalizado = new producto("Plato personalizable","Este plato esta caracterizado porque se personaliza mucho",600);
 let plato1 = platoPersonalizado.info;
 let plato2 = platoFalopa.info;
+let plato3 = platoAdverso.info;
 
-const menuDelDia = [plato1,plato2]
+const menuDelDia = [plato1,plato2,plato3]
 
 ctnMenu.innerHTML = menuDelDia;
+
