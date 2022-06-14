@@ -36,6 +36,7 @@ btnDia.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
     ctnMenuDia.classList.toggle("active");
+    
 });
 btnPescado.addEventListener("click",()=>{
     desactivarBarra();
@@ -127,12 +128,23 @@ class producto {
         this.descripcion = descripcion;
         this.precio = precio;
         this.info = `
-        <b>${nombre}</b><br>
-        ${descripcion}<br>
-        $<b>${precio}</b><br>
+        <h2><b>${nombre}</b></h2><br>
+        <p>${descripcion}</p><br>
+        <h3>$<b>${precio}</b></h3><br>
         `
     }
 }
 
-let quilmes = new producto("Quilmes","Es una cerveza de lata",200);
-document.write(quilmes.info);
+// Lista para agregar productos, y la lista de las listas
+
+const ctnMenu = document.getElementById("ctn-menu");
+
+// agregar producto a menu dia
+let platoFalopa = new producto("Plato sumamente drogradicto","A este plato le fascina la merca no la puede parar de tomar",1400);
+let platoPersonalizado = new producto("Plato personalizable","Este plato esta caracterizado porque se personaliza mucho",600);
+let plato1 = platoPersonalizado.info;
+let plato2 = platoFalopa.info;
+
+const menuDelDia = [plato1,plato2]
+
+ctnMenu.innerHTML = menuDelDia;
