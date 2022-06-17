@@ -2,10 +2,10 @@
 //Botón de menu
 let btnMenu = document.getElementById("btn-menu");
 //Botones internos a Menu
-let btnDia = document.getElementById("btn-dia");
-let btnPescado = document.getElementById("btn-pescado");
-let btnHamburguesa = document.getElementById("btn-hamburguesa");
-let btnSalsa = document.getElementById("btn-salsa");
+let btnHayPique = document.getElementById("btn-haypique");
+let btnVaPlomo = document.getElementById("btn-vaplomo");
+let btnCardumen = document.getElementById("btn-cardumen");
+let btnSalsa = document.getElementById("btn-anclas");
 
 //ClassActive de Menu
 let menuItem = document.querySelector(".menu-items");
@@ -32,18 +32,18 @@ function switchMenu(){
 };
 
 //Click internos de Menu
-btnDia.addEventListener("click",()=>{
+btnHayPique.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
     ctnMenuDia.classList.toggle("active");
     
 });
-btnPescado.addEventListener("click",()=>{
+btnVaPlomo.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
     ctnPescado.classList.toggle("active");
 });
-btnHamburguesa.addEventListener("click",()=>{
+btnCardumen.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
     ctnHamburguesa.classList.toggle("active");
@@ -135,19 +135,22 @@ class producto {
     }
 }
 
-// Lista para agregar productos, y la lista de las listas
+// Id de los divs para vincular y imprimir los platos
+const ctnPiquePoo = document.getElementById("menu-dia-poo");
+const ctnPescadoPoo = document.getElementById("menu-pescado-poo");
+// Producir los platos mediante new producto
+let empanada_de_langostino = new producto("EMPANADA DE LANGOSTINO","Empanada frita de langostinos con muzzarella",350);
+let empanada_de_vigilia = new producto("EMPANADA DE VIGILIA","Empanada frita de brótola ahumada y muzzarella",350);
+let papas_con_alioli = new producto("EMPANADA DE JIBIA","Empanada frita de calamar rojo con muzzarella",400);
 
-const ctnMenu = document.getElementById("ctn-menu");
+// Información de cada plato
+let platoPique1 = empanada_de_langostino.info;
+let platoPique2 = empanada_de_vigilia.info;
+let platoPique3 = papas_con_alioli.info;
 
-// agregar producto a menu dia
-let platoAdverso = new producto("Plato adverso","Este plato es sumamente adverso no se entiende",300);
-let platoFalopa = new producto("Plato sumamente drogradicto","A este plato le fascina la merca no la puede parar de tomar",1400);
-let platoPersonalizado = new producto("Plato personalizable","Este plato esta caracterizado porque se personaliza mucho",600);
-let plato1 = platoPersonalizado.info;
-let plato2 = platoFalopa.info;
-let plato3 = platoAdverso.info;
+//Lista de platos
+const menuDelPique = [platoPique1,platoPique2,platoPique3]
 
-const menuDelDia = [plato1,plato2,plato3]
-
-ctnMenu.innerHTML = menuDelDia;
+//Imprimir el plato
+ctnPiquePoo.innerHTML = menuDelPique;
 
