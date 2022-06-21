@@ -128,9 +128,9 @@ class producto {
         this.descripcion = descripcion;
         this.precio = precio;
         this.info = `
-        <h2><b>${nombre}</b></h2><br>
-        <p>${descripcion}</p><br>
-        <h3>$<b>${precio}</b></h3><br>
+        <h2 class="font"><b>${nombre}</b></h2><br>
+        <p class="descrip">${descripcion}</p><br>
+        <h3 class="font">$<b>${precio}</b></h3><br>
         `
     }
 }
