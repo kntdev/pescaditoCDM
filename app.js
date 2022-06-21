@@ -128,12 +128,12 @@ class producto {
         this.descripcion = descripcion;
         this.precio = precio;
         this.info = `
-        <h2 class="font"><b>${nombre}</b></h2><br>
+        <h2 class="nombre"><b>${nombre}</b></h2><br>
         <p class="descrip">${descripcion}</p><br>
-        <h3 class="font">$<b>${precio}</b></h3><br>
+        <h3 class="precio">$<b>${precio}</b></h3><br>
         `
-    }
-}
+    } 
+};
 
 // Id de los divs para vincular y imprimir los platos
 const ctnPiquePoo = document.getElementById("menu-dia-poo");
@@ -141,15 +141,30 @@ const ctnPescadoPoo = document.getElementById("menu-pescado-poo");
 // Producir los platos mediante new producto
 let empanada_de_langostino = new producto("EMPANADA DE LANGOSTINO","Empanada frita de langostinos con muzzarella",350);
 let empanada_de_vigilia = new producto("EMPANADA DE VIGILIA","Empanada frita de brótola ahumada y muzzarella",350);
-let papas_con_alioli = new producto("EMPANADA DE JIBIA","Empanada frita de calamar rojo con muzzarella",400);
+let empanada_de_jibia = new producto("EMPANADA DE JIBIA","Empanada frita de calamar rojo con muzzarella",400);
 
+let papas_con_alioli = new producto("PAPAS CON ALIOLI","Papas doble cocción con salsa alioli de la casa",520);
+
+let plato_de_cornalitos = new producto("PLATO DE CORNALITOS","Fritos, con dip de kétchup y limón",730);
+
+let mitad_rabas = new producto("½ RABAS",`½ Rabas a la "Pescadito"`,790);
+let rabas = new producto("RABAS",`Rabas a la "Pescadito"`,1580);
+
+let tartar_de_salmon = new producto("TARTAR DE SALMON","Salmón, palta y batata con salsa teriyaki",1480);
+
+// let  = new producto("")
 // Información de cada plato
 let platoPique1 = empanada_de_langostino.info;
 let platoPique2 = empanada_de_vigilia.info;
-let platoPique3 = papas_con_alioli.info;
+let platoPique3 = empanada_de_jibia.info;
+let platoPique4 = papas_con_alioli.info;
+let platoPique5 = plato_de_cornalitos.info;
+let platoPique6 = mitad_rabas.info;
+let platoPique7 = rabas.info;
+let platoPique8 = tartar_de_salmon.info;
 
 //Lista de platos
-const menuDelPique = [platoPique1,platoPique2,platoPique3]
+const menuDelPique = [platoPique1,platoPique2,platoPique3,platoPique4,platoPique5,platoPique6,platoPique7,platoPique8]
 
 //Imprimir el plato
 ctnPiquePoo.innerHTML = menuDelPique;
