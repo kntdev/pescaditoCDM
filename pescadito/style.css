@@ -1,0 +1,15 @@
+header,main,footer{
+    border: 1px red solid;
+}
+
+.aplicacion{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer a{
+    margin-inline: 35px;    
+}

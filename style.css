@@ -32,7 +32,7 @@ header{
 }
 /*///////Header//////*/
 .logito{
-    height: 300px;
+    height: 250px;
     object-fit: contain;
 }
 
@@ -75,7 +75,7 @@ li{
 .menu-items.active{
     transition: 1s ease all;
     visibility: visible;
-    height: 240px;
+    height: 167px;
     overflow: hidden;
 
 }
@@ -155,6 +155,7 @@ li{
 @media only screen and (min-width:64em) { 
 	.container-responsive {
         display: flex;
+        position: relative;
         justify-content: center;
     }
     main{
@@ -183,7 +184,7 @@ li{
     font-size: 2.5em;
     color: rgb(174, 251, 164);
     background-color: rgba(201, 201, 201, 0.205);
-    padding: 5px;
+    padding: 5px 0px;
     border-radius: 60px;
 }
 .container-poo-pique{
@@ -196,7 +197,7 @@ li{
 
 header{
     height: min-content;
-    padding-bottom: 60px;
+    position: relative;
 }
 body{
     background-image: url("img/Fondo.png");
@@ -208,6 +209,7 @@ body{
     border-radius: 20px;
     background-color: rgba(57, 189, 108, 0.469);
     min-width: 250px;
+    display: sticky;
 }
 
 .entradas{
@@ -223,11 +225,14 @@ body{
 .menu-items a{
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    font-size: 1.8em;
+    font-size: 2em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
+    padding: 6px;
+}
+.menu-items a:hover{
+    background-color: rgba(255, 255, 255, 0.205);
 }
