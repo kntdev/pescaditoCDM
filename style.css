@@ -9,6 +9,7 @@
 a{
     text-decoration: none;
     color: #fff;
+    cursor: pointer
 }
 h2{
     font-size: 2em;
@@ -75,9 +76,22 @@ li{
 .menu-items.active{
     transition: 1s ease all;
     visibility: visible;
-    height: 167px;
+    height: 160px;
     overflow: hidden;
-
+}
+.menu-items a{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 6px;
+}
+.menu-items a:hover{
+    background-color: rgba(255, 255, 255, 0.205);
 }
 /*///////Menu/////////*/
 
@@ -99,26 +113,47 @@ li{
     flex-direction: column;
 }
 .container_pescado.active{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .container_hamburguesa.active{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .container_salsa.active{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 /*//////Barra///////*/
 
 .barra-items{
-    display: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: .8em;
+    color: rgb(255, 255, 255);
+    background-color: rgba(29, 71, 59, 0.275);
+    overflow: hidden;
+    height: 0;
+    transition: 1s ease all;
 }
 .barra-items.active{
-    display: block;
-    color:#fff;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 0.6em;
-    font-weight: bold;
-    
+    transition: 1s ease all;
+    visibility: visible;
+    height: 90px;
+    overflow: hidden;
+}
+.barra-items a{
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 8px;
+}
+.barra-items a:hover{
+    background-color: rgba(255, 255, 255, 0.205);
 }
 /*/Barra active/*/
 .container_desayuno{
@@ -187,11 +222,26 @@ li{
     padding: 5px 0px;
     border-radius: 60px;
 }
-.container-poo-pique{
+.container-poo{
     background-color: #10643766;
     margin-inline: 40px;
     padding: 40px;
     border-radius: 15px;
+    width: 650px;
+    margin: 0 auto;
+}
+.subtitulo{
+    color: rgb(253, 252, 156);
+    background-color: #10643766;
+    padding: 10px;
+    font-size: 2.5em;
+    font-weight: 300;
+    border-radius: 10px;
+    width: fit-content;
+    align-self: center;
+}
+.titulo_imagen{
+    width: 100%;
 }
 /*//////WEAS//////////*/
 
@@ -212,27 +262,4 @@ body{
     display: sticky;
 }
 
-.entradas{
-    color: rgb(253, 252, 156);
-    background-color: #10643766;
-    padding: 10px;
-    font-size: 2.5em;
-    font-weight: 300;
-    border-radius: 10px;
-    width: fit-content;
-    align-self: center;
-}
-.menu-items a{
-    display: flex;
-    flex-direction: column;
-    font-size: 2em;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 6px;
-}
-.menu-items a:hover{
-    background-color: rgba(255, 255, 255, 0.205);
-}
+

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pescadito CDM</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
 </head>
 <body>
 <div class="container-responsive">
@@ -20,16 +21,14 @@
             <li  class="items-inicio" id="btn-menu">Cocina</li>
             <ul class="menu-items">
                 <a href="#piqueimg" id="btn-haypique">Hay pique!</a>
-                <a id="btn-vaplomo">Va Plomo</a>
-                <a id="btn-cardumen">Para el cardumen</a>
-                <a id="btn-anclas">Lleven anclas</a>
+                <a href="#plomoimg" id="btn-vaplomo">Va Plomo</a>
+                <a href="#cardumenimg" id="btn-cardumen">Para el cardumen</a>
+                <a href="#anclasimg" id="btn-anclas">Leven anclas</a>
             </ul>
             <li  class="items-inicio" id="btn-barra">Barra</li>
             <ul class="barra-items">
-                <li id="btn-desayuno">DESAYUNO</li>
-                <li id="btn-cerveza">CERVEZAS</li>
-                <li id="btn-gaseosa">GASEOSAS</li>
-                <li id="btn-cocteles">COCTELES</li>
+                <a id="btn-desayuno">Mar de clásicos</a>
+                <a id="btn-cerveza">Mar de sabores</a>
             </ul>
             <li class="items-inicio" >Reservas</li>
         </ul>
@@ -39,25 +38,28 @@
         <!--Container que engloba el div de menu-->
     <div id="container-menu-mayor">
         <div id="ctn-menu" class="container_menu">
-            <img src="/img/HAY PIQUE ESTA MAS O MENOS EEEE.png" class="menu_dia" id="piqueimg"></img>
-            <h4 class="entradas">- Entradas -</h4>
+            <img src="/img/HAY PIQUE ESTA MAS O MENOS EEEE.png" class="titulo_imagen" id="piqueimg" alt="HayPique"></img>
+            <h4 class="subtitulo">- Entradas -</h4>
             <br>
-            <div id="menu-dia-poo" class="container-poo-pique"></div>
+            <div id="menu-dia-poo" class="container-poo"></div>
         </div>
         <div class="container_pescado">
-            <h2 class="menu_pescado">Menu de pescado</h2>
+            <img src="/img/VA PLOMO FRASE.png" alt="VaPlomo" class="titulo_imagen" id="plomoimg">
+            <h4 class="subtitulo">- Principal -</h4>
             <br>
-            <div id="menu-pescado-poo"></div>
+            <div id="menu-pescado-poo" class="container-poo"></div>
         </div>
         <div class="container_hamburguesa">
-            <h2 class="menu_hamburguesa">Menu del hamburguesa</h2>
+            <img src="/img/HAY PIQUE ESTA MAS O MENOS EEEE.png" class="titulo_imagen" id="cardumenimg" alt="Cardumen">
+            <h4 class="subtitulo">- Para compartir -</h4>
             <br>
-            <div class="menu-cardumen-poo"></div>
+            <div id="menu-cardumen-poo" class="container-poo"></div>
         </div>
         <div class="container_salsa">
-            <h2 class="menu_salsa">Menu de salsa</h2>
+            <img src="/img/VA PLOMO FRASE.png" class="titulo_imagen" id="anclasimg" alt="VaPlomo">
+            <h4 class="subtitulo">- Postres -</h4>
             <br>
-            <div class="menu-anclas-poo"></div>
+            <div id="menu-anclas-poo" class="container-poo"></div>
         </div>
     </div>
     <!--Fin del container Menu-->
