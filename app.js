@@ -113,7 +113,8 @@ class producto {
         this.info = `
         <h2 class="nombre"><b>${nombre}</b></h2><br>
         <p class="descrip">${descripcion}</p><br>
-        <h3 class="precio">$<b>${precio}</b></h3><br>
+        <h3 class="precio">$<b>${precio}</b></h3>
+        <hr>
         `
     } 
 };
@@ -144,7 +145,7 @@ const platoPique8 = tartar_de_salmon.info;
 const menuDelPique = [platoPique1,platoPique2,platoPique3,platoPique4,platoPique5,platoPique6,platoPique7,platoPique8]
 
 //Imprimir el plato Hay pique!
-ctnPiquePoo.innerHTML = menuDelPique;
+ctnPiquePoo.innerHTML = menuDelPique.join(" ");
 
 ////////////////////////////////////////////////////
 
@@ -181,7 +182,7 @@ const platoPlomo13 = pesca_del_dia.info;
 //Menu de Plomo
 const menuDePlomo = [platoPlomo1,platoPlomo2,platoPlomo3,platoPlomo4,platoPlomo5,platoPlomo6,platoPlomo7,platoPlomo8,platoPlomo9,platoPlomo10,platoPlomo11,platoPlomo12,platoPlomo13];
 //Imprimir plomo en contenedor
-ctnPlomoPoo.innerHTML = menuDePlomo;
+ctnPlomoPoo.innerHTML = menuDePlomo.join(" ");
 /////////////////////////////////////////////
 // Container POO para Cardumen
 const ctnCardumenPoo = document.getElementById("menu-cardumen-poo");
@@ -194,7 +195,7 @@ const platoCardumen2 = trio_de_mar.info;
 //Menu de cardumen
 const menuCardumen = [platoCardumen1,platoCardumen2];
 // Imprimir en contenedor POO el menu de Cardumen
-ctnCardumenPoo.innerHTML = menuCardumen;
+ctnCardumenPoo.innerHTML = menuCardumen.join(" ");
 /////////////////////////////////////////////////////////////
 // Container de Leven anclas
 const ctnAnclasPoo = document.getElementById("menu-anclas-poo");
@@ -211,7 +212,115 @@ const platoAnclas4 = torta_de_queso.info;
 // Menu de Leven anclas
 const menuAnclas = [platoAnclas1,platoAnclas2,platoAnclas3,platoAnclas4];
 // Imprimir en el contenedor POO el menu de Anclas
-ctnAnclasPoo.innerHTML = menuAnclas;
-
+ctnAnclasPoo.innerHTML = menuAnclas.join(" ");
 
 // const  = new producto("")
+
+// Container de BARRA
+//Productos sin descripcion con flex
+class prodBarra {
+    constructor(nombre,descripcion,precio){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.info = `
+        <div style="display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;text-align: left;padding-bottom: 30px;">
+        <div style="display: flex;flex-direction:column;">
+        <h2 class="nombre_barra"><b>${nombre}</b></h2>
+        <p class="descrip_barra">${descripcion}</p>
+        </div>
+        <h3 class="precio_barra">$<b>${precio}</b></h3>
+        </div>
+        `
+    } 
+};
+//Container de Mar de Clasicos
+//Parte 1
+const ctnClasicoPoo = document.getElementById("barra-clasicos-poo");
+const margarita = new prodBarra("MARGARITA","",650);
+const daiquiri = new prodBarra("DAIQUIRI","",520);
+const mojito = new prodBarra("MOJITO","",520);
+const mint_julep = new prodBarra("MINT JULEP","",750);
+const gimlet_southside = new prodBarra("GIMLET SOUTHSIDE","",580);
+const dry_martini = new prodBarra("DRY MARTINI","",750);
+const negroni = new prodBarra("NEGRONI","",580);
+const gin_tonic = new prodBarra("GIN TONIC","",580);
+const barraClasico = [margarita.info,daiquiri.info,mojito.info,mint_julep.info,gimlet_southside.info,dry_martini.info,negroni.info,gin_tonic.info];
+ctnClasicoPoo.innerHTML = barraClasico.join(" ");
+//Bloody con el hot jugo
+const ctnBloodyPoo = document.getElementById("bloodys-poo");
+const mary = new prodBarra("MARY","(vodka, pickle/aceituna)",740);
+const red_snapper = new prodBarra("RED SNAPPER","(gin, pickle/aceituna)",710);
+const michelada = new prodBarra("MICHELADA","(birra, tajín)",740);
+const barraBloody = [mary.info,red_snapper.info,michelada.info];
+ctnBloodyPoo.innerHTML = barraBloody.join(" ");
+//Cerveza
+const ctnCervezaPoo = document.getElementById("cerveza-poo");
+const patagonia = new prodBarra("PATAGONIA LATA","(bohemian pilsener - amber larger - 24.7)",460);
+const corona_porron = new prodBarra("CORONA PORRÓN","330cc",410);
+const barraCerveza = [patagonia.info,corona_porron.info];
+ctnCervezaPoo.innerHTML = barraCerveza.join(" ");
+//Vinos
+const ctnPiatelliVinoPoo = document.getElementById("piatelli-poo");
+const ctnLagardeVinoPoo = document.getElementById("lagarde-poo");
+const ctnLalalaVinoPoo = document.getElementById("lalala-poo");
+const ctnMadbirdVinoPoo = document.getElementById("madbird-poo");
+//Piatelli
+const piatelli1 = new prodBarra("Piatelli Brut Nature","",3630);
+const piatelli2 = new prodBarra("Piatelli reserva Malbec","",2900);
+const piatelli3 = new prodBarra("Piatelli reserva Rosé","",2900);
+const piatelli4 = new prodBarra("Alto molino Malbec","(Botella)",1800);
+const piatelli5 = new prodBarra("Alto molino Malbec","(Copa 180ML)",450);
+const piatelli6 = new prodBarra("Alto molino Torrentes","(Botella)",1800);
+const piatelli7 = new prodBarra("Alto molino Torrentes","(Copa 180ML)",450);
+const vinosPiatelli = [piatelli1.info,piatelli2.info,piatelli3.info,piatelli4.info,piatelli5.info,piatelli6.info,piatelli7.info];
+ctnPiatelliVinoPoo.innerHTML = vinosPiatelli.join(" ");
+//Lagarde
+const lagarde1 = new prodBarra("Blend de tintas","",2520);
+const lagarde2 = new prodBarra("Sauvignon Blanc","",2520);
+const lagarde3 = new prodBarra("Viognier","",2520);
+const lagarde4 = new prodBarra("Chardonnay","",2520);
+const vinosLagarde = [lagarde1.info,lagarde2.info,lagarde3.info,lagarde4.info];
+ctnLagardeVinoPoo.innerHTML=vinosLagarde.join(" ");
+//Lalála
+const lalala1 = new prodBarra("Rose tempranillo","(Botella)",2380);
+const lalala2 = new prodBarra("Rose tempranillo","(Copa 180ML)",610);
+const lalala3 = new prodBarra("Criollo tinto tempranillo","",2800);
+const vinosLalala = [lalala1.info,lalala2.info,lalala3.info];
+ctnLalalaVinoPoo.innerHTML = vinosLalala.join(" ");
+//Madbird
+const madbird1 = new prodBarra("Ancellota","(Botella)",1660);
+const madbird2 = new prodBarra("Ancellota","(Copa 180ML)",415);
+const madbird3 = new prodBarra("Sauvignon Blanc","(Botella)",1660);
+const madbird4 = new prodBarra("Sauvignon Blanc","(Copa 180ML)",415);
+const vinosMadbird = [madbird1.info,madbird2.info,madbird3.info,madbird4.info];
+ctnMadbirdVinoPoo.innerHTML = vinosMadbird.join(" ");
+//Mar de sabores
+const ctnMarDeSabores = document.getElementById("barra-sabores-poo");
+const ctnNoAlcohol = document.getElementById("barra-sinalcohol-poo");
+//Productos de Mar de sabores
+const prodsabores1 = new prodBarra("ISLA VICTORIA","Gin, vermú rosso, limón, cordíal de jamaica y frutos rojos",580);
+const prodsabores2 = new prodBarra("TAMARINDO JULEP","Cynar 70, tamarindo, agua de rosas, menta, soda",520);
+const prodsabores3 = new prodBarra("GUERITA","Tequila blanco, triple sec, ananá asada, cilantro y lima",590);
+const prodsabores4 = new prodBarra("AGUITADEMAR","Whiskey escocés, limón, especias, sodazo y aceituna",630);
+const prodsabores5 = new prodBarra("SAN ROMÁN FLIP","Ron blanco, falso lulo, lima y almibar picante",630);
+const prodsabores6 = new prodBarra("MANGO #5","Ron blanco, mango, manzana, pepino y mambo",630);
+const prodsabores7 = new prodBarra("TOMASITO COLLINS","Gin, limón, cilantro, agüita de tomate y sodazo",630);
+const prodsabores8 = new prodBarra("NIKKEY COCKTAIL","Pisco quebranta, peras, huacatay, matcha y aquafaba",630);
+const prodsabores9 = new prodBarra("OCUMARE","Ron blanco y dorado, coco especiado, ananá y apricot brandy",630);
+const prodsabores10 = new prodBarra("SOL DEL PÁCIFICO","Pisco quebranta, almibar picante, naranja, limón y un atardecer",630);
+const prodsabores11 = new prodBarra("MANGLAR","Vodka, pomelo, albahaca, ají cayena y tónica",590);
+
+const barraMarDeSabores = [prodsabores1.info,prodsabores2.info,prodsabores3.info,prodsabores4.info,prodsabores5.info,prodsabores6.info,prodsabores7.info,prodsabores8.info,prodsabores9.info,prodsabores10.info,prodsabores11.info];
+ctnMarDeSabores.innerHTML = barraMarDeSabores.join(" ");
+//Sin Alcohol
+const prodnoalcohol1 = new prodBarra("Tamarindo","Agia de tamarindo y limón (Jarra)",980);
+const prodnoalcohol2 = new prodBarra("Tamarindo","Agia de tamarindo y limón (Copa)",290);
+const prodnoalcohol3 = new prodBarra("BREEZE","Pomelo, jamaica y frutos rojos, soda (Jarra)",980);
+const prodnoalcohol4 = new prodBarra("BREEZE","Pomelo, jamaica y frutos rojos, soda (Copa)",290);
+const prodnoalcohol5 = new prodBarra("CANDELA","Naranja, cordial cítrico, canela y soda (Jarra)",980);
+const prodnoalcohol6 = new prodBarra("CANDELA","Naranja, cordial cítrico, canela y soda (Copa)",290);
+
+const barraNoAlcohol = [prodnoalcohol1.info,prodnoalcohol2.info,prodnoalcohol3.info,prodnoalcohol4.info,prodnoalcohol5.info,prodnoalcohol6.info];
+ctnNoAlcohol.innerHTML = barraNoAlcohol.join(" ");
+// const  = new prodBarra("");
