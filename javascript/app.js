@@ -1,5 +1,15 @@
 let inicio = document.querySelector(".inicio");
 
+//Upper
+let up = document.querySelector(".btn-upper");
+let flecha = document.querySelector(".flechita");
+up.addEventListener("click",()=>{
+    document.documentElement.scrollTop = 0;
+});
+function activarUpper(){
+    up.classList.add("active");
+    flecha.classList.add("active");
+}
 //Botón de menu
 let btnMenu = document.getElementById("btn-menu");
 //Botones internos a Menu
@@ -36,6 +46,7 @@ function switchMenu(){
 btnHayPique.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnMenuDia.classList.toggle("active");
     
@@ -43,18 +54,21 @@ btnHayPique.addEventListener("click",()=>{
 btnVaPlomo.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnPescado.classList.toggle("active");
 });
 btnCardumen.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnHamburguesa.classList.toggle("active");
 });
 btnSalsa.addEventListener("click",()=>{
     desactivarBarra();
     desactivarMenu();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnSalsa.classList.toggle("active");
 });
@@ -93,6 +107,7 @@ function desactivarBarra(){
 btnDesayuno.addEventListener("click",()=>{
     desactivarMenu();
     desactivarBarra();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnDesayuno.classList.toggle("active");
 });
@@ -100,6 +115,7 @@ btnDesayuno.addEventListener("click",()=>{
 btnCerveza.addEventListener("click",()=>{
     desactivarMenu();
     desactivarBarra();
+    activarUpper();
     inicio.classList.add("desactivado");
     ctnCerveza.classList.toggle("active");
 });

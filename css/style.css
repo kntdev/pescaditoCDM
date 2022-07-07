@@ -54,6 +54,15 @@ li{
     -ms-user-select: none;
     user-select: none; 
 }
+.btn-reserva{
+    background-color: #1ca5cb;
+}
+.btn-reserva:hover{
+    background-color: #167e9b;
+}
+.a_reservas{
+    color: #ffff7b;
+}
 .items-inicio{
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -62,13 +71,13 @@ li{
     font-size: .8em;
     background-color: rgba(29, 71, 59, 0.275);
     overflow: hidden;
-    height: 0;
+    max-height: 0;
     transition: 1s ease all;
 }
 .menu-items.active{
     transition: 1s ease all;
     visibility: visible;
-    height: 160px;
+    max-height: 200px;
     overflow: hidden;
 }
 .menu-items a{
@@ -127,7 +136,7 @@ li{
     font-size: .8em;
     background-color: rgba(29, 71, 59, 0.275);
     overflow: hidden;
-    height: 0;
+    max-height: 0;
     transition: 1s ease all;
 }
 .btn__item{
@@ -136,7 +145,7 @@ li{
 .barra-items.active{
     transition: 1s ease all;
     visibility: visible;
-    height: 90px;
+    max-height: 150px;
     overflow: hidden;
 }
 .barra-items a{
@@ -296,20 +305,6 @@ main{
     overflow: scroll;
     overflow-x: hidden;
 }
-main::-webkit-scrollbar {
-    width: 12px;
-  }
-main::-webkit-scrollbar-track {
-    background-color: #ffffff83;
-    border-radius: 50px;
-    margin: 20px;
-  }
-main::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    border-left: 0;
-    border-right: 0;
-    background-color: rgb(247, 241, 71);
-  }
 
 body{
     background: linear-gradient(to top, #ada74b, #51c4e0);
@@ -318,9 +313,32 @@ body{
     background-color: rgba(241, 237, 107);
     width: 220px;
 }
+/*///////UPPER///////////*/
 
+.btn-upper,.flechita{
+    display: none;
+}
+
+.btn-upper.active{
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffff30;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.flechita.active{
+    display: inline-block;
+    position: relative;
+    max-height: 40px;
+    max-width: 40px;
+    margin: 8px;
+}
 /*///////FOOTER////////////////*/
 footer{
+    position: relative;
     display: flex;
     height: 4vh;
     width: 100vw;
@@ -328,6 +346,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     flex-wrap: nowrap;
+    z-index: 10;
 }
 .dotmap,.fono,.ig,.fb{
     width: 16px;
@@ -366,6 +385,9 @@ footer{
     }
 }
 @media only screen and (min-width:64em){ 
+    .btn-upper.active,.flechita.active{
+        display: none;
+    }
     header{
         height: 96vh;
     }
@@ -389,7 +411,7 @@ footer{
         width: 100vw;
         height: 96vh;
     }
-    .items-inicio:hover{
+    .btn_abrir:hover{
         background-color: rgba(255, 255, 255, 0.225);
     }
     .titulo_imagen{
@@ -413,7 +435,21 @@ footer{
         height: 100px;
         /* background-color: #ada74b; */
         background: linear-gradient(to bottom,#ada64b00,#ada74b);
-        bottom: 27px;
+        bottom: 25px;
         left: 340px;
     }
+    main::-webkit-scrollbar {
+        width: 12px;
+      }
+    main::-webkit-scrollbar-track {
+        background-color: #ffffff83;
+        border-radius: 50px;
+        margin: 20px;
+      }
+    main::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        border-left: 0;
+        border-right: 0;
+        background-color: rgb(247, 241, 71);
+      }
 }
