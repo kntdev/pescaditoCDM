@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pescadito CDM</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
 </head>
 <body>
 <div class="container-responsive">
     <header>
         <div class="logo">
-            <img src="/img/logo.png" alt="Logo" class="logito">
+            <img src="./assets/img/logo.png" alt="Logo" class="logito">
         </div>
         <div class="container-lista">
         <ul class="items">
@@ -30,34 +30,39 @@
                 <a href="#clasicosimg" id="btn-desayuno" class="btn__item">Mar de clásicos</a>
                 <a href="#saboresimg" id="btn-cerveza" class="btn__item">Mar de sabores</a>
             </ul>
-            <li class="items-inicio" >Reservas</li>
+            <li class="items-inicio"><a target="_blank" style="color: #000;" href="https://wa.me/5491130004691?text=Hola!%20Me%20interesaría%20hacer%20una%20reserva.">Reservas</a></li>
         </ul>
         </div>
         
     </header>
     <main>
+        <div class="inicio">
+            <h1>Bienvenido a Pescadito!</h1>
+            <h2>Consulta por el especial del día</h2><br>
+            <h3>Te deseamos un buen provecho!</h3>
+        </div>
         <!--Container que engloba el div de menu-->
     <div id="container-menu-mayor">
         <div id="ctn-menu" class="container_menu">
-            <img src="/img/HAY PIQUE ESTA MAS O MENOS EEEE.png" class="titulo_imagen" id="piqueimg" alt="HayPique"></img>
+            <img src="./assets/img/hay-pique.png" class="titulo_imagen" id="piqueimg" alt="HayPique"></img>
             <h4 class="subtitulo">- Entradas -</h4>
             <br>
             <div id="menu-dia-poo" class="container-poo"></div>
         </div>
         <div class="container_pescado">
-            <img src="/img/VA PLOMO FRASE.png" alt="VaPlomo" class="titulo_imagen" id="plomoimg">
+            <img src="./assets/img/va-plomo.png" alt="VaPlomo" class="titulo_imagen" id="plomoimg">
             <h4 class="subtitulo">- Principal -</h4>
             <br>
             <div id="menu-pescado-poo" class="container-poo"></div>
         </div>
         <div class="container_hamburguesa">
-            <img src="/img/PARA EL CARDUMEN.png" class="titulo_imagen" id="cardumenimg" alt="Cardumen">
+            <img src="./assets/img/cardumen.png" class="titulo_imagen" id="cardumenimg" alt="Cardumen">
             <h4 class="subtitulo">- Para compartir -</h4>
             <br>
             <div id="menu-cardumen-poo" class="container-poo"></div>
         </div>
         <div class="container_salsa">
-            <img src="/img/LEVEN ANCLAS.png" class="titulo_imagen" id="anclasimg" alt="VaPlomo">
+            <img src="./assets/img/anclas.png" class="titulo_imagen" id="anclasimg" alt="VaPlomo">
             <h4 class="subtitulo">- Postres -</h4>
             <br>
             <div id="menu-anclas-poo" class="container-poo"></div>
@@ -68,7 +73,7 @@
     <div class="container-barra-mayor">
 
         <div class="container_desayuno">
-            <img src="/img/mar_clasico.png" class="titulo_imagen" id="clasicosimg" alt="Clasicos">
+            <img src="./assets/img/mar_clasico.png" class="titulo_imagen" id="clasicosimg" alt="Clasicos">
             <br>
             <div id="barra-clasicos-poo" class="container-poo__barra"></div>
             <h2 class="catalogo-block">BLOODYS CON EL HOT JUGO</h2><br>
@@ -83,7 +88,7 @@
         </div>
 
         <div class="container_cerveza">
-            <img src="/img/mar_sabor.png" class="titulo_imagen" id="saboresimg" alt="Sabores">
+            <img src="./assets/img/mar_sabor.png" class="titulo_imagen" id="saboresimg" alt="Sabores">
             <br>
             <div id="barra-sabores-poo" class="container-poo__barra"></div>
             <h3 class="catalogo-block">SIN ALCOHOL</h3><br>
@@ -95,7 +100,7 @@
                     <p style="font-weight: 300;">todos los dias 16 a 20 hs</p>
                 </div>
                 <div class="card_img">
-                    <img src="/img/logo.png" alt="Logo" class="logito">
+                    <img src="./assets/img/logo.png" alt="Logo" class="logito">
                 </div>
             </div>
 
@@ -103,6 +108,25 @@
     </div>
     </main>
 </div>
-    <script src="app.js"></script>
+    <footer>
+        <div class="item_footer it1">
+            
+            <a href="https://goo.gl/maps/biAcGSF2J4iFUpP19" target="_blank"><img src="./assets/icons/location-dot.svg" alt="locationdot" class="dotmap">
+                <span class="text-footer text-direccion">José A. Cabrera 6099</span>
+            </a>
+        </div>
+        
+        <div class="item_footer it2">
+            <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/pescadito-cdm-menu" target="_blank"><span class="text-footer btn-online">Pedi online!</span></a>
+        </div>
+        
+        <div class="item_footer it3">
+            <a href="https://www.instagram.com/pescaditocdm/?hl=es" target="_blank"><img class="ig" src="./assets/icons/instagram-brands.svg" alt="ig"><span class="text-footer text-social">Instagram</span></a>
+            <a href="https://www.facebook.com/pescaditocdm/" target="_blank"><img class="fb" src="./assets/icons/facebook-square-brands.svg" alt="fb"><span class="text-footer text-social">Facebook</span></a>
+        </div>
+
+    </footer>
+
+    <script src="./javascript/app.js"></script>
 </body>
 </html>
