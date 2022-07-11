@@ -45,8 +45,8 @@ h4{
 li{
     list-style: none;
     cursor: pointer;
-    font-size: 24px;
-    padding: 7px;
+    font-size: 26px;
+    padding: 8px 0;
     letter-spacing: 1px;
     user-select: none; 
 }
@@ -137,7 +137,7 @@ li{
 .btn__item{
     color: #22222490;
     font-size: 1.6em;
-    padding: 5px;
+    padding: 6px;
 }
 .barra-items.active{
     transition: 1s ease all;
