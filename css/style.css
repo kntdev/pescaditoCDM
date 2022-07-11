@@ -39,23 +39,20 @@ h4{
 
 .items{
     text-align: center;
-    margin-top: 5px;
     color: rgb(4, 4, 4);
 }
 
 li{
     list-style: none;
     cursor: pointer;
-    font-size: 2em;
-    padding: 14px;
-    letter-spacing: 2px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    font-size: 24px;
+    padding: 7px;
+    letter-spacing: 1px;
     user-select: none; 
 }
 .btn-reserva{
     background-color: #1ca5cb;
+    border-radius: 0 0 5px 5px;
 }
 .btn-reserva:hover{
     background-color: #167e9b;
@@ -83,13 +80,11 @@ li{
 .menu-items a{
     display: flex;
     flex-direction: column;
-    font-size: 1.9em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 6px;
 }
 .menu-items a:hover{
     background-color: rgba(255, 255, 255, 0.205);
@@ -140,7 +135,9 @@ li{
     transition: 1s ease all;
 }
 .btn__item{
-    color: #222222;
+    color: #22222490;
+    font-size: 1.6em;
+    padding: 5px;
 }
 .barra-items.active{
     transition: 1s ease all;
@@ -151,13 +148,11 @@ li{
 .barra-items a{
     display: flex;
     flex-direction: column;
-    font-size: 2em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 8px;
 }
 .barra-items a:hover{
     background-color: rgba(255, 255, 255, 0.205);
@@ -311,7 +306,8 @@ body{
 }
 .container-lista{
     background-color: rgba(241, 237, 107);
-    width: 220px;
+    width: 190px;
+    border-radius: 7px;
 }
 /*///////UPPER///////////*/
 
