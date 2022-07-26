@@ -25,6 +25,9 @@ h4{
     font-size: 1.60em;
     font-family: 'Oswald', sans-serif;
 }
+i{
+    color: #000;
+}
 
 
 /*///////Header//////*/
@@ -265,7 +268,8 @@ hr{
 }
 .titulo_imagen{
     width: 700px;
-    margin: 60px auto;
+    padding: 40px 0;
+    margin: 0 auto;
 }
 /*//////CARD////////*/
 
@@ -287,11 +291,13 @@ header{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    min-height: 630px;
     background-image: url("../assets/img/Fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding-inline: 60px;
     padding-bottom: 240px;
+    min-width: 320px;
 }
 main{
     position: relative;
@@ -299,6 +305,7 @@ main{
     width: 100vw;
     overflow: scroll;
     overflow-x: hidden;
+    min-width: 320px;
 }
 
 body{
@@ -316,8 +323,7 @@ body{
 }
 
 .btn-upper.active{
-    display: block;
-    position: relative;
+    display: flex;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -326,11 +332,10 @@ body{
     margin-bottom: 40px;
 }
 .flechita.active{
-    display: inline-block;
-    position: relative;
-    max-height: 40px;
-    max-width: 40px;
-    margin: 8px;
+    width: 100%;
+    height: 100%;
+    font-size: 38px;
+    padding-top: 8px;
 }
 /*///////FOOTER////////////////*/
 footer{
@@ -343,12 +348,11 @@ footer{
     justify-content: space-around;
     flex-wrap: nowrap;
     z-index: 10;
+    min-width: 320px;
 }
-.dotmap,.fono,.ig,.fb{
-    width: 16px;
-    height: 16px;
-    color: #fff;
-    margin-left: 15px;
+.dotmap,.ig,.fb{
+    margin-left: 20px;
+    font-size: 20px;
 }
 .item_footer{
     display: flex;
@@ -370,13 +374,9 @@ footer{
     font-weight: 500;
 }
 /*///////Mediaquerys/////*/
-@media only screen and (max-width:360px){
-    .text-direccion{
-        display: none;
-    }
-}
-@media only screen and (max-width:570px){
-    .text-social,.dotmap{
+
+@media only screen and (max-width:573px){
+    .text-social,.dotmap,.text-direccion{
         display: none;
     }
 }
