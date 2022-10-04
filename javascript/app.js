@@ -155,12 +155,152 @@ function desactivarBarra(){
 }
 
 btnDesayuno.addEventListener("click",()=>{
+    const ctnClasicos = document.getElementById('barra-clasicos-poo');
+    const ctnBloodys = document.getElementById('bloodys-poo');
+    const ctnCervezas = document.getElementById('cerveza-poo');
+    const ctnTinto = document.getElementById('tintos-poo');
+    const ctnBlanco = document.getElementById('blancos-poo');
+    const ctnRosado = document.getElementById('rosado-poo');
+    const ctnEspumante = document.getElementById('espumante-poo');
+
     desactivarMenu();
     desactivarBarra();
     activarUpper();
     inicio.classList.add("desactivado");
     ctnDesayuno.classList.toggle("active");
-});
+
+    ctnClasicos.innerHTML = ""
+    ctnBloodys.innerHTML = ""
+    ctnCervezas.innerHTML = ""
+    ctnTinto.innerHTML = ""
+    ctnBlanco.innerHTML = ""
+    ctnRosado.innerHTML = ""
+    ctnEspumante.innerHTML = ""
+
+    getProduct().then(products => products.clasicos.map(product => {
+        const info = `
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        <hr>
+        `
+        // console.log(product)
+
+        ctnClasicos.innerHTML += info
+    }))
+    getProduct().then(products => products.bloodys.map(product => {
+        const info = `
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        <hr>
+        `
+        // console.log(product)
+
+        ctnBloodys.innerHTML += info
+    }))
+    getProduct().then(products => products.cerveza.map(product => {
+        const info = `
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        <hr>
+        `
+        // console.log(product)
+
+        ctnCervezas.innerHTML += info
+    }))
+    getProduct().then(products => products.tintos.map(product => {
+
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnTinto.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnTinto.innerHTML += info
+
+        }
+
+    }))
+    getProduct().then(products => products.blancos.map(product => {
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnBlanco.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnBlanco.innerHTML += info
+
+        }
+    }))
+    getProduct().then(products => products.rosado.map(product => {
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnRosado.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnRosado.innerHTML += info
+
+        }
+    }))
+    getProduct().then(products => products.espumante.map(product => {
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnEspumante.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnEspumante.innerHTML += info
+
+        }
+    }))
+})
 
 btnCerveza.addEventListener("click",()=>{
     desactivarMenu();
@@ -168,6 +308,55 @@ btnCerveza.addEventListener("click",()=>{
     activarUpper();
     inicio.classList.add("desactivado");
     ctnCerveza.classList.toggle("active");
+
+    const ctnSabores = document.getElementById('barra-sabores-poo')
+    const ctnNoAlcohol = document.getElementById('barra-sinalcohol-poo')
+
+    ctnSabores.innerHTML = ""
+    ctnNoAlcohol.innerHTML = ""
+
+    getProduct().then(products => products.sabores.map(product => {
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Jarra: $<b>${product.precio.botella}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnSabores.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnSabores.innerHTML += info
+        }
+    }))
+    getProduct().then(products => products.sinalcohol.map(product => {
+        if(typeof product.precio == 'object'){
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">Jarra: $<b>${product.precio.jarra}</b></h3>
+            <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
+            <hr>
+            `
+            ctnNoAlcohol.innerHTML += info
+
+        } else {
+            info = `
+            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+            <p class="descrip">${product.desc}</p><br>
+            <h3 class="precio">$<b>${product.precio}</b></h3>
+            <hr>
+            `
+            ctnNoAlcohol.innerHTML += info
+        }
+    }))
 });
 
 
@@ -184,7 +373,7 @@ const getProduct = async function () {
     try {
         let res = await fetch(url);
         let data = await res.json();
-        console.log(data)
+        // console.log(data)
         return data
     } catch (error) {
         console.error(error);

@@ -211,150 +211,144 @@
             "desc" : "",
             "precio" : 840,
             "id" : 34
+        }
+    ],
+    "bloodys" : [
+        {
+            "nombre" : "MARY",
+            "desc" : "vodka, pickle/aceituna",
+            "precio" : 1260,
+            "id" : 35
         },
         {
-            "bloodys" : [
-                {
-                    "nombre" : "MARY",
-                    "desc" : "vodka, pickle/aceituna",
-                    "precio" : 1260,
-                    "id" : 35
-                },
-                {
-                    "nombre" : "RED SNAPPER",
-                    "desc" : "gin, pickle/aceituna",
-                    "precio" : 1260,
-                    "id" : 36
-                },
-                {
-                    "nombre" : "MICHELADA",
-                    "desc" : "birra, tajín",
-                    "precio" : 1260,
-                    "id" : 37
-                }
-            ],
-            "cerveza" : [
-                {
-                    "nombre" : "PATAGONIA LATA",
-                    "desc" : "bohemian pilsener - amber larger - 24.7",
-                    "precio" : 580,
-                    "id" : 38
-                },
-                {
-                    "nombre" : "CORONA PORRON",
-                    "desc" : "330cc",
-                    "precio" : 520,
-                    "id" : 39
-                }
-            ],
-            "vinos" : [
-                {
-                    "tintos" : [
-                        {
-                            "nombre" : "GUACHEZCO",
-                            "desc" : "Reserva Cabernet Franc",
-                            "precio" : {
-                                "copa" : 650,
-                                "botella" : 2200
-                            },
-                            "id" : 40
-                        },
-                        {
-                            "nombre" : "ALTO MOLINO",
-                            "desc" : "Malbec",
-                            "precio" : {
-                                "copa" : 650,
-                                "botella" : 1960
-                            },
-                            "id" : 41
-                        },
-                        {
-                            "nombre" : "MADBIRD",
-                            "desc" : "Ancellota",
-                            "precio" : {
-                                "copa" : 650,
-                                "botella" : 1920
-                            },
-                            "id" : 42
-                        },
-                        {
-                            "nombre" : "LAGARDE",
-                            "desc" : "Blend de tintas",
-                            "precio" : 2520,
-                            "id" : 43
-                        },
-                        {
-                            "nombre" : "PIATELLI RESERVA",
-                            "desc" : "Malbec",
-                            "precio" : 3100,
-                            "id" : 44
-                        }
-                    ],
-                    "blancos" : [
-                        {
-                            "nombre" : "MADBIRD",
-                            "desc" : "Sauvignon Blanc",
-                            "precio" : {
-                                "copa" : 650,
-                                "botella" : 1920
-                            },
-                            "id" : 45
-                        },
-                        {
-                            "nombre" : "ALTO MOLINO",
-                            "desc" : "Torrontés",
-                            "precio" : {
-                                "copa" : 650,
-                                "botella" : 1960
-                            },
-                            "id" : 46
-                        },
-                        {
-                            "nombre" : "LAGARDE",
-                            "desc" : "Sauvignon Blanc",
-                            "precio" : 2520,
-                            "id" : 47
-                        },
-                        {
-                            "nombre" : "LAGARDE",
-                            "desc" : "Viognier",
-                            "precio" : 2520,
-                            "id" : 48
-                        },
-                        {
-                            "nombre" : "LAGARDE",
-                            "desc" : "Chardonnay",
-                            "precio" : 2520,
-                            "id" : 49
-                        }
-                    ],
-                    "rosado" : [
-                        {
-                            "nombre" : "PIATELLI",
-                            "desc" : "Reserva Rosé",
-                            "precio" : 3100,
-                            "id" : 50
-                        },
-                        {
-                            "nombre" : "MATIAS MORCOS",
-                            "desc" : "Moscatel Naranjo",
-                            "precio" : {
-                                "copa" : 680,
-                                "botella" : 2200
-                            },
-                            "id" : 51
-                        }
-                    ],
-                    "espumante" : [
-                        {
-                            "nombre" : "PIATELLI",
-                            "desc" : "Brut nature",
-                            "precio" : 3840,
-                            "id" : 52
-                        }
-                    ]
-                }
-            ]
+            "nombre" : "RED SNAPPER",
+            "desc" : "gin, pickle/aceituna",
+            "precio" : 1260,
+            "id" : 36
+        },
+        {
+            "nombre" : "MICHELADA",
+            "desc" : "birra, tajín",
+            "precio" : 1260,
+            "id" : 37
+        }
+    ],
+    "cerveza" : [
+        {
+            "nombre" : "PATAGONIA LATA",
+            "desc" : "bohemian pilsener - amber larger - 24.7",
+            "precio" : 580,
+            "id" : 38
+        },
+        {
+            "nombre" : "CORONA PORRON",
+            "desc" : "330cc",
+            "precio" : 520,
+            "id" : 39
+        }
+    ],
+    "tintos" : [
+        {
+            "nombre" : "GUACHEZCO",
+            "desc" : "Reserva Cabernet Franc",
+            "precio" : {
+                "copa" : 650,
+                "botella" : 2200
+            },
+            "id" : 40
+        },
+        {
+            "nombre" : "ALTO MOLINO",
+            "desc" : "Malbec",
+            "precio" : {
+                "copa" : 650,
+                "botella" : 1960
+            },
+            "id" : 41
+        },
+        {
+            "nombre" : "MADBIRD",
+            "desc" : "Ancellota",
+            "precio" : {
+                "copa" : 650,
+                "botella" : 1920
+            },
+            "id" : 42
+        },
+        {
+            "nombre" : "LAGARDE",
+            "desc" : "Blend de tintas",
+            "precio" : 2520,
+            "id" : 43
+        },
+        {
+            "nombre" : "PIATELLI RESERVA",
+            "desc" : "Malbec",
+            "precio" : 3100,
+            "id" : 44
+        }
+    ],
+    "blancos" : [
+        {
+            "nombre" : "MADBIRD",
+            "desc" : "Sauvignon Blanc",
+            "precio" : {
+                "copa" : 650,
+                "botella" : 1920
+            },
+            "id" : 45
+        },
+        {
+            "nombre" : "ALTO MOLINO",
+            "desc" : "Torrontés",
+            "precio" : {
+                "copa" : 650,
+                "botella" : 1960
+            },
+            "id" : 46
+        },
+        {
+            "nombre" : "LAGARDE",
+            "desc" : "Sauvignon Blanc",
+            "precio" : 2520,
+            "id" : 47
+        },
+        {
+            "nombre" : "LAGARDE",
+            "desc" : "Viognier",
+            "precio" : 2520,
+            "id" : 48
+        },
+        {
+            "nombre" : "LAGARDE",
+            "desc" : "Chardonnay",
+            "precio" : 2520,
+            "id" : 49
+        }
+    ],
+    "rosado" : [
+        {
+            "nombre" : "PIATELLI",
+            "desc" : "Reserva Rosé",
+            "precio" : 3100,
+            "id" : 50
+        },
+        {
+            "nombre" : "MATIAS MORCOS",
+            "desc" : "Moscatel Naranjo",
+            "precio" : {
+                "copa" : 680,
+                "botella" : 2200
+            },
+            "id" : 51
+        }
+    ],
+    "espumante" : [
+        {
+            "nombre" : "PIATELLI",
+            "desc" : "Brut nature",
+            "precio" : 3840,
+            "id" : 52
         }
     ],
     "sabores" : [
@@ -423,37 +417,36 @@
             "desc" : "vodka, pomelo, albahaca, ají cayena y tónica",
             "precio" : 830,
             "id" : 63
+        }
+    ]
+    ,
+    "sinalcohol" : [
+        {
+            "nombre" : "LIMONADA",
+            "desc" : "limón, menta y jengibre",
+            "precio" : {
+                "copa" : 420,
+                "jarra" : 1380
+            },
+            "id" : 64
         },
         {
-            "sinalcohol" : [
-                {
-                    "nombre" : "LIMONADA",
-                    "desc" : "limón, menta y jengibre",
-                    "precio" : {
-                        "copa" : 420,
-                        "jarra" : 1380
-                    },
-                    "id" : 64
-                },
-                {
-                    "nombre" : "BREEZE",
-                    "desc" : "pomelo, jamaica y frutos rojos, soda",
-                    "precio" : {
-                        "copa" : 420,
-                        "jarra" : 1380
-                    },
-                    "id" : 65
-                },
-                {
-                    "nombre" : "CANDELA",
-                    "desc" : "naranja, limón, canela y soda",
-                    "precio" : {
-                        "copa" : 420,
-                        "jarra" : 1380
-                    },
-                    "id" : 66
-                }
-            ]
+            "nombre" : "BREEZE",
+            "desc" : "pomelo, jamaica y frutos rojos, soda",
+            "precio" : {
+                "copa" : 420,
+                "jarra" : 1380
+            },
+            "id" : 65
+        },
+        {
+            "nombre" : "CANDELA",
+            "desc" : "naranja, limón, canela y soda",
+            "precio" : {
+                "copa" : 420,
+                "jarra" : 1380
+            },
+            "id" : 66
         }
     ]
 }
