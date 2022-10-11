@@ -179,10 +179,13 @@ btnDesayuno.addEventListener("click",()=>{
 
     getProduct().then(products => products.clasicos.map(product => {
         const info = `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
         <h2 class="nombre"><b>${product.nombre}</b></h2><br>
         <p class="descrip">${product.desc}</p><br>
+        </div>
         <h3 class="precio">$<b>${product.precio}</b></h3>
-        <hr>
+        </div>
         `
         // console.log(product)
 
@@ -190,10 +193,13 @@ btnDesayuno.addEventListener("click",()=>{
     }))
     getProduct().then(products => products.bloodys.map(product => {
         const info = `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
         <h2 class="nombre"><b>${product.nombre}</b></h2><br>
         <p class="descrip">${product.desc}</p><br>
+        </div>
         <h3 class="precio">$<b>${product.precio}</b></h3>
-        <hr>
+        </div>
         `
         // console.log(product)
 
@@ -201,10 +207,13 @@ btnDesayuno.addEventListener("click",()=>{
     }))
     getProduct().then(products => products.cerveza.map(product => {
         const info = `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
         <h2 class="nombre"><b>${product.nombre}</b></h2><br>
         <p class="descrip">${product.desc}</p><br>
+        </div>
         <h3 class="precio">$<b>${product.precio}</b></h3>
-        <hr>
+        </div>
         `
         // console.log(product)
 
@@ -214,21 +223,29 @@ btnDesayuno.addEventListener("click",()=>{
 
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnTinto.innerHTML += info
 
         } else {
-            info = `
-            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-            <p class="descrip">${product.desc}</p><br>
-            <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
-            `
+            const info = `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        </div>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        </div>
+        `
             ctnTinto.innerHTML += info
 
         }
@@ -237,21 +254,29 @@ btnDesayuno.addEventListener("click",()=>{
     getProduct().then(products => products.blancos.map(product => {
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnBlanco.innerHTML += info
 
         } else {
             info = `
-            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-            <p class="descrip">${product.desc}</p><br>
-            <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
-            `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        </div>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        </div>
+        `
             ctnBlanco.innerHTML += info
 
         }
@@ -259,21 +284,29 @@ btnDesayuno.addEventListener("click",()=>{
     getProduct().then(products => products.rosado.map(product => {
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnRosado.innerHTML += info
 
         } else {
             info = `
-            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-            <p class="descrip">${product.desc}</p><br>
-            <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
-            `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        </div>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        </div>
+        `
             ctnRosado.innerHTML += info
 
         }
@@ -281,21 +314,29 @@ btnDesayuno.addEventListener("click",()=>{
     getProduct().then(products => products.espumante.map(product => {
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnEspumante.innerHTML += info
 
         } else {
             info = `
-            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-            <p class="descrip">${product.desc}</p><br>
-            <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
-            `
+        <div class="ctn-barra-item">
+        <div class="ctn-barra-item_titulo">
+        <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+        <p class="descrip">${product.desc}</p><br>
+        </div>
+        <h3 class="precio">$<b>${product.precio}</b></h3>
+        </div>
+        `
             ctnEspumante.innerHTML += info
 
         }
@@ -318,20 +359,30 @@ btnCerveza.addEventListener("click",()=>{
     getProduct().then(products => products.sabores.map(product => {
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Jarra: $<b>${product.precio.botella}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnSabores.innerHTML += info
 
         } else {
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnSabores.innerHTML += info
         }
@@ -339,20 +390,30 @@ btnCerveza.addEventListener("click",()=>{
     getProduct().then(products => products.sinalcohol.map(product => {
         if(typeof product.precio == 'object'){
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">Jarra: $<b>${product.precio.jarra}</b></h3>
             <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnNoAlcohol.innerHTML += info
 
         } else {
             info = `
+            <div class="ctn-barra-item">
+            <div class="ctn-barra-item_titulo">
             <h2 class="nombre"><b>${product.nombre}</b></h2><br>
             <p class="descrip">${product.desc}</p><br>
+            </div>
+            <div class="ctn-barra-item_precio">
             <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
+            </div>
+            </div>
             `
             ctnNoAlcohol.innerHTML += info
         }

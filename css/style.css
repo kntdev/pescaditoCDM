@@ -19,7 +19,23 @@ a{
     text-decoration: none;
     cursor: pointer
 }
-
+.ctn-barra-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* flex-wrap: wrap; */
+}
+.ctn-barra-item_titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ctn-barra-item_precio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 /*///////Header//////*/
 .logito{
     max-width: 190px;
@@ -217,12 +233,12 @@ header{
 }
 
 .catalogo-block{
-    text-align: left;
+    text-align: center;
     color: var(--azuloscuro);
     font-family: 'Roboto Condensed', sans-serif;
 }
 .catalogo-block__vinos{
-    text-align: left;
+    text-align: center;
     font-weight: 400;
     color: var(--azuloscuro);
     font-family: 'Roboto Condensed', sans-serif;
