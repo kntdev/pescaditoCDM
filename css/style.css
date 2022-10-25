@@ -22,7 +22,7 @@ a{
 .ctn-barra-item{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 10px;
     /* flex-wrap: wrap; */
 }
@@ -35,6 +35,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-evenly;
+    text-align: end;
 }
 /*///////Header//////*/
 .logito{
@@ -235,36 +237,48 @@ header{
 .catalogo-block{
     text-align: center;
     color: var(--azuloscuro);
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Abel', sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    padding: 20px;
 }
 .catalogo-block__vinos{
     text-align: center;
-    font-weight: 400;
     color: var(--azuloscuro);
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Abel', sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 0;
 }
 /*/////POO Containers//////*/
 .container-poo{
-    max-width: 320px;
+    min-width: 320px;
+    max-width: 700px;
+    width: 70%;
     margin: 0 auto;
+    padding: 20px;
 }
 .nombre{
     font-family: 'Anton', sans-serif;
     font-size: 2em;
     font-weight: 300;
     color: var(--azuloscuro);
+    text-align: start;
 }
 .descrip{
     font-family: 'Abel', sans-serif;
     font-weight: 700;
     font-size: 1.3em;
     color: var(--azuloscuro);
+    text-align: start;
 }
 .precio{
-    font-family: 'Anton', sans-serif;
-    font-size: 2em;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.6em;
     color: var(--azuloscuro);
-    font-weight: 300;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: end;
 }
 hr{
     border: 1px var(--azuloscuro) solid;
@@ -284,6 +298,16 @@ hr{
     min-width: 200px;
     padding-top: 40px;
     margin: 0 auto;
+}
+.titulo-vinos{
+    font-weight: bold;
+    background-color: var(--azuloscuro);
+    color: var(--blanco);
+    width: 50%;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    border-radius: 50px;
 }
 /*//////CARD////////*/
 
