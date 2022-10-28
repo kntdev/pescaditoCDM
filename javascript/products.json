@@ -27,25 +27,25 @@
         {
             "nombre" : "PLATO DE CORNALITOS",
             "desc" : "Fritos, con dip de kétchup y limón",
-            "precio" : 1050, 
+            "precio" : 1150, 
             "id" : 5
         },
         {
             "nombre" : "RABAS (Media ración)",
             "desc" : "Rabas a la “pescadito”",
-            "precio" : 1250, 
+            "precio" : 1550, 
             "id" : 6
         },
         {
             "nombre" : "RABAS",
             "desc" : "Rabas a la “pescadito”",
-            "precio" : 2250, 
+            "precio" : 2450, 
             "id" : 7
         },
         {
-            "nombre" : "SHAKSHUKA PESCA",
-            "desc" : "Salsa de tomate, sofrito de pimientos, cebolla y brotola acompañados con huevos escalfados y pan",
-            "precio" : 1390, 
+            "nombre" : "NACHITOS Y MEJILLON",
+            "desc" : "Ensalada rusa, escabeche de mejillones y nachos crocantes",
+            "precio" : 1790, 
             "id" : 8
         },
         {
@@ -59,7 +59,7 @@
         {
             "nombre" : "POBOY ORIGINARIO DE LUISIANA",
             "desc" : "Sándwich de langostinos acompañado con papas",
-            "precio" : 1770, 
+            "precio" : 1890, 
             "id" : 10
         },
         {
@@ -69,46 +69,46 @@
             "id" : 11
         },
         {
-            "nombre" : "FISH BURGUER",
-            "desc" : "Pesca apanada frita, cebollas caramelizadas, tomates confitados y salsa mil islas, acompañado con papas",
-            "precio" : 1660, 
-            "id" : 12
-        },
-        {
             "nombre" : "HOT FISH",
             "desc" : "Salchicha parrillera (receta propia, pesca blanca, calamar y langostino) acompañado de papas y virutas de batata",
             "precio" : 1480, 
+            "id" : 12
+        },
+        {
+            "nombre" : "CAUSA PERUANA",
+            "desc" : "Masa de papa y ají amarillo con relleno de pesca blanca y salsa tártara",
+            "precio" : 1550, 
             "id" : 13
+        },
+        {
+            "nombre" : "ENSALADA CESAR",
+            "desc" : "Merluza apanada cítrica, mix de verdes, crutons, aderezo césar y queso",
+            "precio" : 1360, 
+            "id" : 67
         },
         {
             "nombre" : "CEVICHE VERSION PESCADITO",
             "desc" : "Pesca del día, leche de tigre y maíz tostado",
-            "precio" : 2060, 
+            "precio" : 2560, 
             "id" : 14
+        },
+        {
+            "nombre" : "FISH AND CHIPS",
+            "desc" : "Filet de merluza, tempura de miel y cerveza, acompañado con papas",
+            "precio" : 1610, 
+            "id" : 15
         },
         {
             "nombre" : "ARROZ CON CALAMARES",
             "desc" : "Arroz con pimenton ahumado, bolognesa de calamares y cebolla crispy",
             "precio" : 1420, 
-            "id" : 15
+            "id" : 68
         },
         {
             "nombre" : "RAGOUT DE HONGOS",
             "desc" : "Estofado de hongos de pino, champigñones y portobellos con base de arroz graneado",
             "precio" : 1580, 
             "id" : 16
-        },
-        {
-            "nombre" : "GUISO DE LENTEJAS",
-            "desc" : "Tradicional guizado con pesca frita",
-            "precio" : 1420, 
-            "id" : 17
-        },
-        {
-            "nombre" : "GUISO DE LENTEJAS (Veggie)",
-            "desc" : "Tradicional guizado",
-            "precio" : 1190, 
-            "id" : 18
         },
         {
             "nombre" : "MILA NAPO DE BODEGON",
@@ -119,13 +119,13 @@
         {
             "nombre" : "PAPILLOT CON PESCA DEL DÍA",
             "desc" : "Abadejo fresco, vegetales y alcaparras horneados en sus propios jugos",
-            "precio" : 2330, 
+            "precio" : 2720, 
             "id" : 20
         },
         {
             "nombre" : "PESCA DEL DIA",
             "desc" : "Al horno con ensalada y papas (stock limitado)",
-            "precio" : 2850, 
+            "precio" : 3050, 
             "id" : 21
         }
     ],
@@ -133,13 +133,13 @@
         {
             "nombre" : "TABLA DE MAR",
             "desc" : "cornalitos, merluza, mejillones,rabas, papas fritas, coleslaw y alioli",
-            "precio" : 3770, 
+            "precio" : 4520, 
             "id" : 22
         },
         {
             "nombre" : "TRÍO DE MAR",
             "desc" : "ceviche, arroz con calamares y chicarrón de pescado y mejillones",
-            "precio" : 3480, 
+            "precio" : 3550, 
             "id" : 23
         }
     ],
@@ -165,7 +165,7 @@
         {
             "nombre" : "TORTA DE QUESO",
             "desc" : "Acompañado con dulce de estación",
-            "precio" : 630,
+            "precio" : 870,
             "id" : 27
         }
     ],
