@@ -3,19 +3,19 @@
         {
             "nombre" : "EMPANADA DE LANGOSTINO",
             "desc" : "Empanada frita de langostinos con muzzarella",
-            "precio" : 650, 
+            "precio" : 750, 
             "id" : 1
         },
         {
             "nombre" : "EMPANADA DE VIGILIA",
             "desc" : "Empanada frita de brótola ahumada y muzzarella",
-            "precio" : 620, 
+            "precio" : 750, 
             "id" : 2
         },
         {
-            "nombre" : "EMPANADA DE JIBIA",
-            "desc" : "Empanada frita de calamar rojo con muzzarella",
-            "precio" : 650, 
+            "nombre" : "EMPANADA DE CALAMAR",
+            "desc" : "Empanada frita de calamar con muzzarella",
+            "precio" : 720, 
             "id" : 3
         },
         {
@@ -45,7 +45,7 @@
         {
             "nombre" : "NACHITOS Y MEJILLON",
             "desc" : "Ensalada rusa, escabeche de mejillones y nachos crocantes",
-            "precio" : 1790, 
+            "precio" : "1790 (Pican dos)", 
             "id" : 8
         },
         {
@@ -59,19 +59,19 @@
         {
             "nombre" : "POBOY ORIGINARIO DE LUISIANA",
             "desc" : "Sándwich de langostinos acompañado con papas",
-            "precio" : 1890, 
+            "precio" : 2060, 
             "id" : 10
         },
         {
             "nombre" : "BOCATA DE CALAMAR",
             "desc" : "Sándwich en pan ciabatta con calamares fritos, con pico de gallo y salsa tártara, acompañado con papas",
-            "precio" : 1770, 
+            "precio" : 1990, 
             "id" : 11
         },
         {
             "nombre" : "HOT FISH",
             "desc" : "Salchicha parrillera (receta propia, pesca blanca, calamar y langostino) acompañado de papas y virutas de batata",
-            "precio" : 1480, 
+            "precio" : 1520, 
             "id" : 12
         },
         {
@@ -89,13 +89,13 @@
         {
             "nombre" : "CEVICHE VERSION PESCADITO",
             "desc" : "Pesca del día, leche de tigre y maíz tostado",
-            "precio" : 2560, 
+            "precio" : 2720, 
             "id" : 14
         },
         {
             "nombre" : "FISH AND CHIPS",
             "desc" : "Filet de merluza, tempura de miel y cerveza, acompañado con papas",
-            "precio" : 1610, 
+            "precio" : 1860, 
             "id" : 15
         },
         {
@@ -133,13 +133,13 @@
         {
             "nombre" : "TABLA DE MAR",
             "desc" : "cornalitos, merluza, mejillones,rabas, papas fritas, coleslaw y alioli",
-            "precio" : 4520, 
+            "precio" : 4670, 
             "id" : 22
         },
         {
             "nombre" : "TRÍO DE MAR",
             "desc" : "ceviche, arroz con calamares y chicarrón de pescado y mejillones",
-            "precio" : 3550, 
+            "precio" : 3700, 
             "id" : 23
         }
     ],
@@ -197,13 +197,13 @@
         {
             "nombre" : "GIMLET SOUTHSIDE",
             "desc" : "",
-            "precio" : 990,
+            "precio" : 880,
             "id" : 32
         },
         {
             "nombre" : "NEGRONI",
             "desc" : "",
-            "precio" : 840,
+            "precio" : 990,
             "id" : 33
         },
         {
@@ -223,7 +223,7 @@
         {
             "nombre" : "RED SNAPPER",
             "desc" : "gin, pickle/aceituna",
-            "precio" : 1260,
+            "precio" : 1620,
             "id" : 36
         },
         {
@@ -252,8 +252,8 @@
             "nombre" : "GUACHEZCO",
             "desc" : "Reserva Cabernet Franc",
             "precio" : {
-                "copa" : 650,
-                "botella" : 2200
+                "copa" : 680,
+                "botella" : 2800
             },
             "id" : 40
         },
@@ -261,8 +261,8 @@
             "nombre" : "ALTO MOLINO",
             "desc" : "Malbec",
             "precio" : {
-                "copa" : 650,
-                "botella" : 1960
+                "copa" : 680,
+                "botella" : 2100
             },
             "id" : 41
         },
@@ -270,21 +270,21 @@
             "nombre" : "MADBIRD",
             "desc" : "Ancellota",
             "precio" : {
-                "copa" : 650,
-                "botella" : 1920
+                "copa" : 680,
+                "botella" : 2050
             },
             "id" : 42
         },
         {
             "nombre" : "LAGARDE",
             "desc" : "Blend de tintas",
-            "precio" : 2520,
+            "precio" : 2800,
             "id" : 43
         },
         {
             "nombre" : "PIATELLI RESERVA",
             "desc" : "Malbec",
-            "precio" : 3100,
+            "precio" : 3200,
             "id" : 44
         }
     ],
@@ -293,8 +293,8 @@
             "nombre" : "MADBIRD",
             "desc" : "Sauvignon Blanc",
             "precio" : {
-                "copa" : 650,
-                "botella" : 1920
+                "copa" : 680,
+                "botella" : 2050
             },
             "id" : 45
         },
@@ -302,27 +302,27 @@
             "nombre" : "ALTO MOLINO",
             "desc" : "Torrontés",
             "precio" : {
-                "copa" : 650,
-                "botella" : 1960
+                "copa" : 680,
+                "botella" : 2100
             },
             "id" : 46
         },
         {
             "nombre" : "LAGARDE",
             "desc" : "Sauvignon Blanc",
-            "precio" : 2520,
+            "precio" : 2800,
             "id" : 47
         },
         {
             "nombre" : "LAGARDE",
             "desc" : "Viognier",
-            "precio" : 2520,
+            "precio" : 2800,
             "id" : 48
         },
         {
             "nombre" : "LAGARDE",
             "desc" : "Chardonnay",
-            "precio" : 2520,
+            "precio" : 2800,
             "id" : 49
         }
     ],
@@ -337,8 +337,8 @@
             "nombre" : "MATIAS MORCOS",
             "desc" : "Moscatel Naranjo",
             "precio" : {
-                "copa" : 680,
-                "botella" : 2200
+                "copa" : 750,
+                "botella" : 2800
             },
             "id" : 51
         }
