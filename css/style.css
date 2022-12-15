@@ -316,10 +316,11 @@ hr{
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
+    font-family: 'Mulish', sans-serif;
 }
 .card_text{
     margin-right: 15px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1em;
     color: var(--azuloscuro);
 }
 
