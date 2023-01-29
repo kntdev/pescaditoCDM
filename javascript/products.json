@@ -313,10 +313,7 @@
         {
             "nombre" : "PIATELLI",
             "desc" : "Brut nature",
-            "precio" : {
-                "copa" : 750,
-                "botella" : 3840
-            },
+            "precio" : 3840,
             "id" : 52
         }
     ],
