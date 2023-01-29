@@ -229,15 +229,15 @@
     ],
     "cervezas" : [
         {
-            "nombre" : "PATAGONIA TIRADA",
-            "desc" : "bohemian pilsener - amber larger - 24.7",
-            "precio" : 680,
+            "nombre" : "CERVEZA TIRADA",
+            "desc" : "stella artois - bohemian pilsener - amber larger - 24.7",
+            "precio" : 780,
             "id" : 38
         },
         {
-            "nombre" : "CORONA PORRON",
-            "desc" : "330cc",
-            "precio" : 580,
+            "nombre" : "SIDRA PATAGONIA TIRADA",
+            "desc" : "",
+            "precio" : 780,
             "id" : 39
         }
     ],
@@ -261,16 +261,21 @@
             "id" : 42
         },
         {
+            "nombre" : "GAUCHEZCO",
+            "desc" : "Malbec",
+            "precio" : 2800,
+            "id" : 43
+        },        {
             "nombre" : "LAGARDE",
             "desc" : "Blend de tintas",
             "precio" : 2800,
-            "id" : 43
+            "id" : 44
         },
         {
             "nombre" : "PIATELLI RESERVA",
             "desc" : "Malbec",
             "precio" : 3200,
-            "id" : 44
+            "id" : 45
         }
     ],
     "blancos" : [
@@ -282,15 +287,6 @@
                 "botella" : 2100
             },
             "id" : 46
-        },
-        {
-            "nombre" : "LAGARDE",
-            "desc" : "Sauvignon Blanc",
-            "precio" : {
-                "copa" : 680,
-                "botella" : 2800
-            },
-            "id" : 47
         },
         {
             "nombre" : "LAGARDE",
@@ -311,12 +307,6 @@
             "desc" : "Reserva Rosé",
             "precio" : 3100,
             "id" : 50
-        },
-        {
-            "nombre" : "MATIAS MORCOS",
-            "desc" : "Moscatel Naranjo",
-            "precio" : 3100,
-            "id" : 51
         }
     ],
     "espumante" : [
@@ -344,12 +334,6 @@
             "id" : 54
         },
         {
-            "nombre" : "GUERITA",
-            "desc" : "tequila blanco, triple sec, ananá asada, cilantro y limón",
-            "precio" : 840,
-            "id" : 55
-        },
-        {
             "nombre" : "BAJA CALIFORNIA",
             "desc" : "ron añejo, limón, naranja, jalapeños",
             "precio" : 840,
@@ -358,7 +342,7 @@
         {
             "nombre" : "MACAO",
             "desc" : "vodka, malamado viognier, pepino, pastís, limón",
-            "precio" : 920,
+            "precio" : 840,
             "id" : 57
         },
         {
