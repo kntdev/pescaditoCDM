@@ -1,259 +1,97 @@
-import data from './products.json' assert {type: 'json'}
-let inicio = document.querySelector(".inicio");
+import data from './products.json' assert { type: 'json' };
 
-//Upper
-let up = document.querySelector(".btn-upper");
-let flecha = document.querySelector(".flechita");
-up.addEventListener("click",()=>{
-    document.documentElement.scrollTop = 0;
-});
-function activarUpper(){
+const inicio = document.querySelector(".inicio");
+const up = document.querySelector(".btn-upper");
+const flecha = document.querySelector(".flechita");
+const btnMenu = document.getElementById("btn-menu");
+const menuItem = document.querySelector(".menu-items");
+const itemsBarra = document.querySelector(".barra-items");
+const btnBarra = document.getElementById("btn-barra");
+const ctnDesayuno = document.querySelector(".container_desayuno");
+const ctnCerveza = document.querySelector(".container_cerveza");
+
+// Upper Scroll Button
+up.addEventListener("click", () => document.documentElement.scrollTop = 0);
+const activarUpper = () => {
     up.classList.add("active");
     flecha.classList.add("active");
-}
-//Botón de menu
-let btnMenu = document.getElementById("btn-menu");
-//Botones internos a Menu
-let btnHayPique = document.getElementById("btn-haypique");
-let btnVaPlomo = document.getElementById("btn-vaplomo");
-let btnCardumen = document.getElementById("btn-cardumen");
-let btnSalsa = document.getElementById("btn-anclas");
+};
 
-//ClassActive de Menu
-let menuItem = document.querySelector(".menu-items");
-//ClassActive de internos de Menu
-let ctnMenuDia = document.querySelector(".container_menu");
-let ctnPescado = document.querySelector(".container_pescado");
-let ctnHamburguesa = document.querySelector(".container_hamburguesa");
-let ctnSalsa = document.querySelector(".container_salsa");
-
-//ClassActive de Barra
-
-let itemsBarra = document.querySelector(".barra-items");
-let btnBarra = document.getElementById("btn-barra");
-
-//Click para abrir el Menu
-
-btnMenu.addEventListener("click",()=>{
+// Toggle Menu
+btnMenu.addEventListener("click", () => {
     menuItem.classList.toggle("active");
     itemsBarra.classList.remove("active");
 });
 
-function switchMenu(){
-    menuItem.classList.remove("active");
-};
+const switchMenu = () => menuItem.classList.remove("active");
 
-//Click internos de Menu
-btnHayPique.addEventListener("click",()=>{
-    const ctnPique = document.getElementById('menu-dia-poo');
+// Desactivar Secciones
+const desactivarMenu = () => document.querySelectorAll(".container_menu, .container_pescado, .container_hamburguesa, .container_salsa").forEach(el => el.classList.remove("active"));
+const desactivarBarra = () => document.querySelectorAll(".container_desayuno, .container_cerveza").forEach(el => el.classList.remove("active"));
 
-    desactivarBarra();
-    desactivarMenu();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnMenuDia.classList.toggle("active");
-    ctnPique.innerHTML = ""
+// Click internos de Menu
+const menuItems = [
+    { btn: "btn-haypique", cont: "menu-dia-poo", dataKey: "haypique", section: ".container_menu" },
+    { btn: "btn-vaplomo", cont: "menu-pescado-poo", dataKey: "vaplomo", section: ".container_pescado" },
+    { btn: "btn-cardumen", cont: "menu-cardumen-poo", dataKey: "cardumen", section: ".container_hamburguesa" },
+    { btn: "btn-anclas", cont: "menu-anclas-poo", dataKey: "anclas", section: ".container_salsa" }
+];
 
-    // Funciones
-    mostrarData(ctnPique, data.haypique, "comida")
-
+menuItems.forEach(({ btn, cont, dataKey, section }) => {
+    document.getElementById(btn).addEventListener("click", () => {
+        desactivarBarra();
+        desactivarMenu();
+        activarUpper();
+        inicio.classList.add("desactivado");
+        document.querySelector(section).classList.toggle("active");
+        const container = document.getElementById(cont);
+        container.innerHTML = "";
+        mostrarData(container, data[dataKey], "comida");
+    });
 });
-btnVaPlomo.addEventListener("click",()=>{
-    const ctnPlomo = document.getElementById('menu-pescado-poo');
 
-    desactivarBarra();
-    desactivarMenu();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnPescado.classList.toggle("active");
-    ctnPlomo.innerHTML = ""
-
-    // Funciones
-    mostrarData(ctnPlomo, data.vaplomo, "comida")
-
-});
-btnCardumen.addEventListener("click",()=>{
-    const ctnCardumen = document.getElementById('menu-cardumen-poo');
-
-    desactivarBarra();
-    desactivarMenu();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnHamburguesa.classList.toggle("active");
-    ctnCardumen.innerHTML = ""
-
-    // Funciones
-    mostrarData(ctnCardumen, data.cardumen, "comida")
-
-});
-btnSalsa.addEventListener("click",()=>{
-    const ctnAnclas = document.getElementById('menu-anclas-poo');
-
-    desactivarBarra();
-    desactivarMenu();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnSalsa.classList.toggle("active");
-    ctnAnclas.innerHTML = ""
-
-    // Funciones
-    mostrarData(ctnAnclas, data.anclas, "comida")
-
-});
-// Funcion para cambiar de menu a barra
-function desactivarMenu(){
-    ctnSalsa.classList.remove("active");
-    ctnMenuDia.classList.remove("active");
-    ctnPescado.classList.remove("active");
-    ctnHamburguesa.classList.remove("active");
-}
-
-function menuSwitchBarra(){
-    desactivarMenu();
-    itemsBarra.classList.toggle("active");
-}
-function switchBarra(){
-    btnBarra.addEventListener("click",abrirBarra());
-};
-btnBarra.addEventListener("click",()=>{
+// Botón Barra
+btnBarra.addEventListener("click", () => {
     itemsBarra.classList.toggle("active");
     switchMenu();
 });
 
-// Interactividad botón internos a Barra
-let btnDesayuno = document.getElementById("btn-desayuno");
-let btnCerveza = document.getElementById("btn-cerveza");
+// Interactividad con la Barra
+const barraItems = [
+    { btn: "btn-desayuno", sections: ["barra-clasicos-poo", "bloodys-poo", "cerveza-poo", "tintos-poo", "blancos-poo", "rosado-poo", "espumante-poo"], dataKeys: ["clasicos", "bloodys", "cervezas", "tintos", "blancos", "rosado", "espumante"], type: "botella", container: ctnDesayuno },
+    { btn: "btn-cerveza", sections: ["barra-sabores-poo", "barra-sinalcohol-poo"], dataKeys: ["sabores", "sinalcohol"], type: "jarra", container: ctnCerveza }
+];
 
-let ctnDesayuno = document.querySelector(".container_desayuno"); 
-let ctnCerveza = document.querySelector(".container_cerveza");
-
-function desactivarBarra(){ 
-    ctnDesayuno.classList.remove("active");
-    ctnCerveza.classList.remove("active");
-}
-
-btnDesayuno.addEventListener("click",()=>{
-    const ctnClasicos = document.getElementById('barra-clasicos-poo');
-    const ctnBloodys = document.getElementById('bloodys-poo');
-    const ctnCervezas = document.getElementById('cerveza-poo');
-    const ctnTinto = document.getElementById('tintos-poo');
-    const ctnBlanco = document.getElementById('blancos-poo');
-    const ctnRosado = document.getElementById('rosado-poo');
-    const ctnEspumante = document.getElementById('espumante-poo');
-
-    desactivarMenu();
-    desactivarBarra();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnDesayuno.classList.toggle("active");
-
-    ctnClasicos.innerHTML = ""
-    ctnBloodys.innerHTML = ""
-    ctnCervezas.innerHTML = ""
-    ctnTinto.innerHTML = ""
-    ctnBlanco.innerHTML = ""
-    ctnRosado.innerHTML = ""
-    ctnEspumante.innerHTML = ""
-
-    // Funciones
-    mostrarData(ctnClasicos, data.clasicos, "botella")
-    mostrarData(ctnBloodys, data.bloodys, "botella")
-    mostrarData(ctnCervezas, data.cervezas, "botella")
-    mostrarData(ctnTinto, data.tintos, "botella")
-    mostrarData(ctnBlanco, data.blancos, "botella")
-    mostrarData(ctnRosado, data.rosado, "botella")
-    mostrarData(ctnEspumante, data.espumante, "botella")
-})
-
-btnCerveza.addEventListener("click",()=>{
-    desactivarMenu();
-    desactivarBarra();
-    activarUpper();
-    inicio.classList.add("desactivado");
-    ctnCerveza.classList.toggle("active");
-
-    const ctnSabores = document.getElementById('barra-sabores-poo')
-    const ctnNoAlcohol = document.getElementById('barra-sinalcohol-poo')
-
-    ctnSabores.innerHTML = ""
-    ctnNoAlcohol.innerHTML = ""
-
-    // Funciones
-        mostrarData(ctnSabores, data.sabores, "jarra")
-        mostrarData(ctnNoAlcohol, data.sinalcohol, "jarra")
+barraItems.forEach(({ btn, sections, dataKeys, type, container }) => {
+    document.getElementById(btn).addEventListener("click", () => {
+        desactivarMenu();
+        desactivarBarra();
+        activarUpper();
+        inicio.classList.add("desactivado");
+        container.classList.toggle("active");
+        sections.forEach((sec, idx) => {
+            const el = document.getElementById(sec);
+            el.innerHTML = "";
+            mostrarData(el, data[dataKeys[idx]], type);
+        });
+    });
 });
 
-function mostrarData(ctn, param, tipo){
-    
-    if(tipo == "jarra"){
-        param.forEach(product =>{
-            if(typeof product.precio == 'object'){
-                ctn.innerHTML += `
-                <div class="ctn-barra-item">
+// Mostrar Datos
+function mostrarData(ctn, param, tipo) {
+    param.forEach(product => {
+        const precio = typeof product.precio === 'object'
+            ? Object.entries(product.precio).map(([key, value]) => `<h3 class="precio">${key.charAt(0).toUpperCase() + key.slice(1)}: $<b>${value}</b></h3>`).join('')
+            : `<h3 class="precio">$<b>${product.precio}</b></h3>`;
+
+        ctn.innerHTML += `
+            <div class="ctn-barra-item">
                 <div class="ctn-barra-item_titulo">
-                <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-                <p class="descrip">${product.desc}</p><br>
+                    <h2 class="nombre"><b>${product.nombre}</b></h2><br>
+                    <p class="descrip">${product.desc}</p><br>
                 </div>
-                <div class="ctn-barra-item_precio">
-                <h3 class="precio">Jarra: $<b>${product.precio.jarra}</b></h3>
-                <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-                </div>
-                </div>
-                `
-            } else {
-                ctn.innerHTML +=  `
-                <div class="ctn-barra-item">
-                <div class="ctn-barra-item_titulo">
-                <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-                <p class="descrip">${product.desc}</p><br>
-                </div>
-                <div class="ctn-barra-item_precio">
-                <h3 class="precio">$<b>${product.precio}</b></h3>
-                </div>
-                </div>
-                `
-            }
-        })
-    }
-    else if (tipo == "botella"){
-        param.forEach(product =>{
-            if(typeof product.precio == 'object'){
-                ctn.innerHTML += `
-                <div class="ctn-barra-item">
-                <div class="ctn-barra-item_titulo">
-                <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-                <p class="descrip">${product.desc}</p><br>
-                </div>
-                <div class="ctn-barra-item_precio">
-                <h3 class="precio">Botella: $<b>${product.precio.botella}</b></h3>
-                <h3 class="precio">Copa: $<b>${product.precio.copa}</b></h3>
-                </div>
-                </div>
-                `
-            } else {
-                ctn.innerHTML +=  `
-                <div class="ctn-barra-item">
-                <div class="ctn-barra-item_titulo">
-                <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-                <p class="descrip">${product.desc}</p><br>
-                </div>
-                <div class="ctn-barra-item_precio">
-                <h3 class="precio">$<b>${product.precio}</b></h3>
-                </div>
-                </div>
-                `
-            }
-        })
-    } else if (tipo == "comida"){
-        param.forEach(product =>{
-            ctn.innerHTML +=  `
-            <h2 class="nombre"><b>${product.nombre}</b></h2><br>
-            <p class="descrip">${product.desc}</p><br>
-            <h3 class="precio">$<b>${product.precio}</b></h3>
-            <hr>
-            `
-        })
-    } else {
-        return console.log("hay un fallo")
-    }
+                <div class="ctn-barra-item_precio">${precio}</div>
+            </div>
+        `;
+    });
 }
